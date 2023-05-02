@@ -75,7 +75,7 @@ html,body{
   right: -43px;
 }
 .range input{
-  --webkit-appearance: none;
+  -webkit-appearance: none;
   width: 100%;
   height: 3px;
   background: #ddd;
@@ -95,7 +95,7 @@ html,body{
   cursor: pointer;
 }
 .range input::-moz-range-thumb{
-  --webkit-appearance: none;
+  -webkit-appearance: none;
   width: 20px;
   height: 20px;
   background: red;
