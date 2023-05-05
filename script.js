@@ -20,29 +20,21 @@
 //   const customRangeSlider = new CustomRangeSlider();
   
 
-class MyCarousel extends HTMLElement {
-  constructor() {
-    super();
-    
-    // Get the photos array from the attribute and parse it as JSON
-    const photos = JSON.parse(this.getAttribute('photos'));
-    
-    // Create the carousel element
-    const carousel = document.createElement('div');
-    carousel.classList.add('carousel');
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-    // Add the slides to the carousel
-    photos.forEach(photo => {
-      const slide = document.createElement('div');
-      slide.style.backgroundImage = `url(${photo})`;
-      slide.classList.add('slide');
-      carousel.appendChild(slide);
-    });
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
 
-    // Add the carousel to the custom element
-    this.appendChild(carousel);
-  }
-}
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
 
-// Define the custom element
-customElements.define('my-carousel', MyCarousel);
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
