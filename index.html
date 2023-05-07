@@ -19,35 +19,53 @@
 </div>
 </div> -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section aria-label="Newest Photos">
-    <div class="carousel" data-carousel>
-      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
-      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
-      <ul data-slides>
-        <li class="slide" data-active>
-          <img src="https://source.unsplash.com/78A265wPiO4" alt="Nature Image #1">
-        </li>
-        <li class="slide">
-          <img src="https://source.unsplash.com/eOpewngf68w" alt="Nature Image #2">
-        </li>
-        <li class="slide">
-          <img src="https://source.unsplash.com/ndN00KmbJ1c" alt="Nature Image #3">
-        </li>
-      </ul>
-    </div>
-  </section>
-</body>
-</html>
-<script src="script.js"></script>
 
-  </body>
-</html>
+<h2 style="text-align:center">Multiple Slideshows</h2>
+
+<p>Slideshow 1:</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" style="width:100%; height: 400px;">
+  </div>
+
+  <div class="mySlides1">
+    <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg" style="width:100%; height: 400px;">
+  </div>
+
+  <div class="mySlides1">
+    <img src="https://cdn.cookielaw.org/logos/889c435d-64b4-46d8-ad05-06332fe1d097/4353a07c-5b48-453a-b5ab-e8498c172697/IMG-ReBrand-Blue.png" style="width:100%; height: 400px;">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>Slideshow 2:</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="https://platinumlist.net/guide/wp-content/uploads/2023/03/IMG-worlds-of-adventure.webp" style="width:100%; height: 400px;">
+  </div>
+
+  <div class="mySlides2">
+    <img src="https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/11/udHvbKwV-IMG-Dubai-UAE-1.jpg" style="width:100%; height: 400px;">
+  </div>
+
+  <div class="mySlides2">
+    <img src="https://cdn.cookielaw.org/logos/889c435d-64b4-46d8-ad05-06332fe1d097/4353a07c-5b48-453a-b5ab-e8498c172697/IMG-ReBrand-Blue.png" style="width:100%; height: 400px;">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html> 
